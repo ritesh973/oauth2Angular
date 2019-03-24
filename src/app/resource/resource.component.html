@@ -1,0 +1,13 @@
+<p>Client Id: {{resourceData.client_id}}</p>
+<p>Organisation: {{resourceData.organization}}</p>
+<p>User Name: {{resourceData.userName}}</p>
+<p>Scope To Access</p>
+<div *ngFor="let data of resourceData.scope">
+  {{data}}
+</div>
+    <button  class="button" (click)="getEmployeeData()">Get Employee</button>
+    <button  class="button" (click)="getManagerData()">Get Manager</button>
+    <a routerLink="/" class="button">Go Back</a>
+<div>
+  <p>{{foo.name}}</p>
+</div>

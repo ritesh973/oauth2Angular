@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body background="bgimage.jpg">
+
+<div class="w3-container w3-green">
+  <h1>Oauth2 Demo</h1> 
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-third">
+    <a routerLink="/login" class="button">Login</a>
+  </div>
+
+  <div class="w3-third">
+    <a  class="button" (click)="navigateToResource()">Access Resource</a>
+  </div>
+  <div class="w3-third">
+    <a routerLink="/" class="button" (click)="logout()">Log out</a>
+  </div>
+</div>
+<p>{{statusMessage}}</p>
+
+</body>
+</html>

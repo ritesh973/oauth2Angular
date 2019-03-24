@@ -1,0 +1,29 @@
+<div class="col-md-6 col-md-offset-3">
+  <h2>Login</h2>
+  <form name="form" (ngSubmit)="f.form.valid && login(user)" #f="ngForm" novalidate>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+          <label for="firstName">Client Id</label>
+          <input type="text" class="form-control" name="firstName" [(ngModel)]="user.clientId" #firstName="ngModel" required />
+          <div *ngIf="f.submitted && !firstName.valid" class="help-block">Client Id is required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !secret.valid }">
+        <label for="secret">Client Password</label>
+        <input type="password" class="form-control" name="secret" [(ngModel)]="user.secret" #password="ngModel" required />
+        <div *ngIf="f.submitted && !secret.valid" class="help-block">Secret is required</div>
+    </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" name="username" [(ngModel)]="user.username" #username="ngModel" required />
+          <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" [(ngModel)]="user.password" #password="ngModel" required />
+          <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+      </div>
+      <div class="form-group">
+          <button type="submit"  class="btn btn-primary">Login</button>
+          <button type="button"  routerLink="/" class="btn btn-danger">Cancel</button>
+      </div>
+  </form>
+</div>
